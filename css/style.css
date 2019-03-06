@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Spirax');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700,900');
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+	  height:100%	
+}
+
+body {
+      font-family: "Raleway",sans-serif;
+      font-weight: lighter;
+}
+
+header {
+      width: 100%;
+      height: 100%;
+      background: url(../img/bg.jpg) no-repeat 50% 50%;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+      background-size: cover;
+	  backdrop-filter:brightness(50%);
+}
+
+/* Full-width input fields */
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttonsModal */
+.buttonModalLogin {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.buttonModalLogin:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtnLogin {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainerLogin {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.avatarLogin img{
+	border-radius: 100%;
+		display: block;
+				width: 15em;
+}
+
+.avatarLogin {
+			border-radius: 100%;
+			display: inline-block;
+			margin: 2em 0 2em 0;
+			padding: 0.5em;
+			border: solid 1px rgba(255, 255, 255, 0.25);
+			background-color: rgba(255, 255, 255, 0.075);
+			text-align: center;
+}
+
+.containerLogin {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modalLogin {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+.modal-contentLogin {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.closeLogin {
+	
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.closeLogin:hover,
+.closeLogin:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animateLogin {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.pswLogin {
+     display: block;
+     float: none;
+  }
+  .cancelbtnLogin {
+     width: 100%;
+  }
+}	
+
+/*scroll_btn*/
+#scrollBtns {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  height:200px;
+  width:100px;
+  position: fixed;
+  z-index: 10;
+  background-color: #A14AFF;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+}
+.btnInside{
+	margin-top:1px;
+	float:left;
+	text-decoration: none;
+    color: white;
+    font-size: 12px;
+	height:20%;
+	width:100%;
+	text-align:center;
+	background-color:#382950;
+	line-height: 40px;
+}
+
+.btnInside:hover {
+  background-color: #322950;
+  text-decoration:none;
+  color:yellow;
+}
+
+@media(max-width: 1000px) {
+	#scrollBtns{
+		right:0;
+		left:20px;
+	}
+}
+/*buttonDown*/
+.btnCentered{
+	position:absolute;
+	align-items: center;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	top:82%;
+}
+.oneDownBtn{
+	height:50px;
+	width:50px;
+}
+
+/*navigation*/
+nav {
+	z-index: 12;
+    position: fixed;
+    width: 100%;
+    line-height: 40px;
+	font-family: "Poppins", bold;
+}
+
+nav ul {
+    line-height: 40px;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+	background: rgba(50, 41, 80, 0.65);
+}
+nav.black ul {
+      background: rgba(50, 41, 80, 0.9);
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 10px 20px;
+	  color: #CC6280;
+	  font-size: 18px;
+}
+nav ul li:hover {
+	background: rgba(50, 41, 80);
+	color:yellow;
+}
+
+nav ul li a {
+      text-decoration: none;
+      font-size: 15px;
+	  font-weight: 500;
+}
+
+.menu-icon {
+      line-height: 40px;
+      width: 100%;
+      background: rgba(50, 41, 80);
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+.logo {
+	z-index: 3;
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin-left: 40px;
+    font-size: 25px;
+    letter-spacing: 0px;
+	font-family:"Raleway";
+	text-decoration:none;
+	color: #FA6980 ;
+}
+
+/*intro*/
+.introText {
+	margin: auto;
+	width: 50%;	
+	color:white;
+	text-align: left;
+	position:absolute;
+	align-items: center;
+	left:40%;
+    margin-right: -60%;
+    transform: translate(-50%, -50%);
+	top:55%;
+}
+.introText h3 {
+	font-size:65px;
+}
+.introDownBtn{
+	height:50px;
+	width:50px;
+	background-color:red;
+	position: absolute;
+	margin:45% 50%;
+}
+@media(max-width: 1150px) {
+	nav ul li {
+      display: inline-block;
+      padding-right: 10px;
+	}
+	.logo{
+		font-size:20px;
+	}
+	.introText{
+		width:600px;
+	}
+	
+}
+@media(max-width: 1000px) {
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 10px;
+			margin-left:10px;
+			font-size:18px;
+      }
+      nav ul {
+            max-height: 0px;
+			max-width:200px;
+            background: rgba(50, 41, 80, 0.9);
+			float:right;
+      }
+      nav.black ul {
+		  
+          background: rgba(50, 41, 80, 0.95);
+      }
+      .showing {
+            max-height: 34em;
+      }
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+			text-size: 30px;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+	  .content-intro{
+		  padding-top:100px;
+	  }
+	  .content-intro h3{
+			font-size:15px;
+	  }
+	  .content-intro h2{
+			font-size:40px;
+	  }
+	  .introText{
+		text-align:center;
+		left:50%;
+		margin-right: -50%;
+		width:600px;
+	  }
+	  
+	  
+	  header {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		backdrop-filter:brightness(50%);
+		background: url(../img/bgwithoutlogo.jpg) no-repeat 50% 50%
+	}
+}
+@media(max-width: 770px) {
+	.introText h3{
+		font-size:40px;
+	}
+}
+@media(max-width: 550px) {
+	.introText h3{
+		font-size:30px;
+	}
+}
+/*about*/
+#about{
+	width: auto;
+    height: 100%;
+    background: url(../img/trian.png) no-repeat 50% 50%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter:brightness(50%);
+	
+}
+.outsideDiv{
+	height:auto;
+	width:98%;
+	position:absolute;
+	left:1%;
+	right:1%;
+}
+.textDiv{
+	float:left;
+	width:50%;
+	height:100%;
+}
+.textDiv h2{
+	margin-top:100px;
+	padding-bottom:10%;
+	color:white;
+	font-size:78px;
+	font-family: "Poppins";
+	font-weight:500;
+	text-align: center;
+}
+.textDiv p{
+	color:white;
+	font-size:24px;
+	font-family: "Poppins";
+	text-align: justify;
+	margin-left: auto;
+    margin-right: auto;
+	width:80%;
+}
+.photoDiv{
+	float:left;
+	width:50%;
+	height:100%;
+	padding-top:180px;
+}
+.maxForPhotoDiv{
+	max-width:600px !important;
+	
+}
+@media(max-width: 1000px){
+	#about{
+		height:180%;
+		background-size: cover;
+		background: url(../img/triaodwr.png) no-repeat 50% 50%;
+	}
+	
+	.textDiv{
+		width:100%;
+		height:auto;
+	}
+	.textDiv p{
+		text-align:center;
+	}
+	.photoDiv{
+		width:100%;
+		height:auto;
+		padding-top:50px;
+	}
+	.maxForPhotoDiv{
+		max-width:600px;
+	}
+	
+}
+@media(max-height: 860px){
+	.photoDiv{
+		padding-top:150px;
+	}
+	
+}
+@media(max-height: 770px){
+	.textDiv p{
+		font-size:17px;
+	}
+	.textDiv h2{
+		padding-bottom:5%;
+	}
+	.photoDiv{
+		padding-top:120px;
+	}
+	.maxForPhotoDiv{
+		width:500px;
+	}
+}
+.mySlides {
+	display:none;
+	border-radius:20px;
+}
+
+.w3-badge {
+	height:25px;
+	width:25px;
+	padding:0;
+	cursor:pointer;
+}
+
+/*edition*/
+#edition{
+	width:100%;
+	height:auto;
+	overflow:auto
+}
+.twoEditionSlides{
+	height:auto;
+}
+.editionDivContainer {
+	position: relative;
+	width: 50%;
+	float:left;
+}
+.editionDivContainer h3{
+	color:#AC7BA6;
+	text-align:center;
+	font-size:80px;
+	font-family: "Poppins";
+	font-weight:500;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.editionDivContainerLeftSide{
+	position: relative;
+	width: 50%;
+	float:left;
+}
+.editionDivContainerLeftSide h3{
+	color:#402359;
+	text-align:center;
+	font-size:80px;
+	font-family: "Poppins";
+	font-weight:500;
+	
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.editionDivContainerLeftSide h4{
+	color:#402359;
+	text-align:center;
+	font-size:40px;
+	letter-spacing:3px;
+	font-family: "Poppins";
+	font-weight:400;
+	
+	
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.editionDivContainerLeftSide h5{
+	width:100%;
+	color:#402359;
+	text-align:center;
+	font-size:50px;
+	letter-spacing:5px;
+	font-family: "Poppins";
+	font-weight:400;
+	
+	position: absolute;
+	top: 83%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@media(max-width: 1000px){
+	.editionDivContainerLeftSide{
+		width: 100%;
+	}
+	.editionDivContainer {
+		width: 100%;
+	}
+}
+.editionImage {
+	display: block;
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.editionImgOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #AC7BA6;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.editionImgOverlayLeftSide{
+	position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #402359;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.editionDivContainer:hover .editionImgOverlay {
+  width: 100%;
+}
+
+.editionDivContainerLeftSide:hover .editionImgOverlayLeftSide{
+	width: 100%;
+	left:0;
+}
+
+.editionImgText {
+	font-family: "Poppins";
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+.editionImgTextLeft {
+	font-family: "Poppins";
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+.plakatImg{
+	width:50%;
+	border-radius:30px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+.plakatImgLeft{
+	width:50%;
+	border-radius:30px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+@media(max-height: 700px){
+	.editionImgTextLeft {
+		
+		top: 15%;
+		
+	}
+}
+/*organization*/
+
+#org{
+	background-color:red;
+	width:100%;
+	height:auto;
+    background: url(../img/triandark.png) no-repeat 50% 50%;
+	
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter:brightness(50%);
+}
+.outsideOrg{
+	height:500px;
+}
+.textOrg{
+	padding-top:30px;
+	color: #AC7BA6;
+	font-family:Poppins;
+	font-size:80px;
+	text-align:center;
+	font-weight:500;
+	margin-bottom:20px;
+}
+.insideOrg {
+	border-radius:40px;
+	overflow: hidden;
+	width: 70%;
+	position: relative;
+	margin-left:auto;
+	margin-right:auto;
+	background: rgba(255, 255, 255, 0.4);
+  
+}
+.slider {
+	height:200px;
+	display: flex;
+	position: relative;
+	left: 0px;
+	list-style: none;
+	margin: 0;
+	padding: 0 4rem;
+	li { padding: 0.5rem; }
+  
+}
+.slider li{
+	margin-right:20px;
+}
+.slider li img{
+	height:100%;
+	border-radius:30px;
+}
+.btnLeftOrg, .btnRightOrg {
+  position: absolute;
+  height: 100%;
+  border: none;
+  background: white;
+  opacity: 0.5;
+  font-size: 120px;
+  top: 0;
+  z-index: 8;
+  cursor: pointer;
+  width:10%;
+}
+.btnLeftOrg {
+  left: 0px;
+  padding-right: 0.8rem;
+}
+
+.btnRightOrg {
+  right: 0px;
+  padding-left: 0.8rem;
+}
+
+/*contact*/
+#contact{
+	height:20px;
+}
+.contact{
+	text-align:center;
+	font-family:Poppins;
+	padding-bottom:60px;
+	background: url(../img/trian.png) no-repeat 50% 50%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter:brightness(50%);
+}
+.contact h3{
+	margin-top:40px;
+	color:#402359;
+	text-align:center;
+	font-size:80px;
+	font-weight:500;
+	margin-bottom:0;
+}
+.contact p{
+	margin-top:0;
+	color:#fff;
+	font-size:40px;
+	font-weight:500;
+	padding-top:0;
+}
+form{
+	margin-top: 50px;
+	transition: all 4s easy-in-out;
+}
+.form-control{
+	width:700px;
+	background:transparent;
+	border: 2px solid rgba(255, 255, 255, .4);
+	outline:none;
+	color:#fff;
+	font-size:18px;
+	border-radius:5px;
+	margin-top:15px;
+	
+}
+.form-control:hover{
+	border-color:#FF0077;
+	transition: .6s ease;
+}
+input{
+	height:50px;
+	padding-left:10px;
+}
+form .submit{
+	background:#FF0077;
+	border-color: transparent;
+	color:#fff;
+	font-size:20px;
+	letter-spacing:2px;
+	height:50px;
+	margin-top:20px; 
+}
+form .submit:hover{
+	background-color:#B41263;
+	opacity:.7;
+	cursor:pointer;
+}
+textarea{
+	height:200px;
+	padding-left:10px;
+}
+@media(max-width: 760px){
+	.form-control
+	{
+		width:400px;
+	}
+}
+/*footer*/
+.footer{
+	background-color: #151515;
+    background-size: cover;
+}
+
+.lockup{
+	padding:40px 30px;
+	overflow:auto;
+}
+.logo-picture{
+	float:left;
+	margin-right:30px;
+	text-decoration:none;
+	color:#fff;
+}
+.content-wrap{
+	float:left;
+	margin-left:40px;
+}
+.copyright{
+	margin:0;
+	text-transform:uppercase;
+	font-size:15px;
+	color:#FEF9DC;
+	font-family: "Raleway",sans-serif;
+}
+.whitecolor{
+	color:#FEF9DC;
+	margin-right:40px;
+	margin-bottom:15px;
+}
+.whitecolor:hover{
+	color:#CC005F;
+}

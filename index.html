@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	  
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="-1" />
+	  
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="Szymon Czartoryski" content="">
+		<title>Szkolne Warsztaty Fizyczne - WFy</title>
+     
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+	  
+		<script src="js/jquery.min.js"></script>
+		<script src="js/modernizr.min.js"></script>
+		<script src	="js/index.js"></script>
+</head>
+<body>
+	<div id="scrollBtns">
+		<a class="btnInside" title="Na górę" href="#intro">Góra</a>
+		<a title="O WFach" class="btnInside" href="#about">WFy</a>
+		<a title="Edycje" class="btnInside" href="#edition">Edycje</a>
+		<a title="Współpraca" class="btnInside"  href="#org">Współpraca</a>
+		<a title="Dowiedz się więcej" class="btnInside" href="#learn">Zapytaj</a>
+	</div>
+	<header>
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+			<div class="logo">
+				Szkolne Warsztaty Fizyczne - WFy
+            </div>
+			<div class="menu">
+                <ul>
+					<li>
+						<a href="#intro">
+							<span style="font-size: 1.4em; color: white;">
+								<i class="fas fa-home"></i>
+							</span>
+						</a>
+					</li>
+                    <a href="edition.html"><li>EDYCJE</li></a>
+                    <a href="kadra.html"><li>KADRA</li></a>
+                    <a href="polecamy.html"><li>POLECAMY</li></a>
+                    <a href="contact.html"><li>KONTAKT</li></a>
+                    <a onclick="document.getElementById('id01').style.display='block'"><li>MATERIAŁY</li></a>
+                </ul>
+            </div>
+        </nav>
+		<?php 
+
+$pass = $_POST['pass'];
+
+if($pass == "admin")
+{
+        include("materialy.html");
+}
+else
+{
+    if(isset($_POST))
+    {?>
+
+        <div id="id01" class="modalLogin"> 
+		  <form class="modal-contentLogin animateLogin" method="POST" action="materialy.php">
+			<div class="imgcontainerLogin">
+			  <span onclick="document.getElementById('id01').style.display='none'" class="closeLogin" title="Close Modal">&times;</span>
+			  <span class="avatarLogin"><img src="img/Logo/WarsztatyFizyczne.png" alt="Avatar"></span>
+			</div>
+
+			<div class="containerLogin">
+			  
+
+			  <label for="psw"><b>Aby dostać się do materiałów wpisz hasło:</b></label>
+			  <input type="password" placeholder="Wpisz hasło" name="psw" required>
+				
+			  <button class="buttonModalLogin" type="submit">Zaloguj</button>
+			  
+			</div>
+
+			
+		  </form>
+		</div>
+    <?}
+}
+?>
+		
+		<section id="intro">
+						<div class="introText">
+							<h3>Szkolne Warsztaty Fizyczne</h3>
+						</div>	
+			<div class="btnCentered" style="margin-top:5%;">
+				<a title="O WFach"  href="#about">
+					<div class="oneDownBtn">
+						<span style="font-size: 3.5em; color: white; left:20px; text-align: center;margin-left: auto; margin-right: auto; display:block;">
+							<i class="fas fa-angle-down"></i>
+						</span>
+					</div>
+				</a>
+			</div>
+		</section>
+    </header>
+	<section id ="about">
+		<div class="outsideDiv">
+			<div class="textDiv">
+			<h2>Dla kogo?</h2>
+			<p>
+			Szkolne Warsztaty Fizyczne (WFy) to propozycja wyjazdowych zajęć edukacyjnych dla licealistów obejmujących tematykę fizyczną i promujących aktywność fizyczną.
+			</br></br>Celem Warsztatów Fizycznych jest wsparcie uczniów zainteresowanych poszerzaniem wiedzy z zakresu fizyki, kształceniem umiejętności obserwowania i badania otaczającego nas świata oraz postaw charakterystycznych dla pracy naukowej.
+			</p>
+			</div>
+			<div class="photoDiv">
+				<div class="w3-content w3-display-container maxForPhotoDiv" >
+				
+				  <img class="mySlides" src="img/slider/about01.JPG" style="width:100%;-webkit-filter: opacity(90%);filter: opacity(90%);">
+				  <img class="mySlides" src="img/slider/about02.JPG" style="width:100%">
+				  <img class="mySlides" src="img/slider/about03.JPG" style="width:100%">
+				  <img class="mySlides" src="img/slider/about04.JPG" style="width:100%">
+				  <img class="mySlides" src="img/slider/about05.JPG" style="width:100%">
+				  <img class="mySlides" src="img/slider/about06.JPG" style="width:100%">
+				  
+				  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-middle" style="width:100%">
+					<button class="w3-button w3-display-left"  onclick="plusDivs(-1)">&#10094;</button >
+					<button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button >
+				  </div>
+				  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+					<span class="w3-badge w3-teal demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="edition">
+		<div class="twoEditionSlides">
+			<div class="editionDivContainer">
+					<img src="img/traindarksquare.png" alt="" class="editionImage">
+					<h3>Poprzednie </br> WFy</h3>
+			  <div class="editionImgOverlay">
+				<img src="img/plakaty/plakat11.png" alt="" class="plakatImg">
+				<a href="edycja11.html" target="_blank"><div class="editionImgText">PRZEJDŹ DO EDYCJI</div></a>
+			  </div>
+			</div>
+			<div class="editionDivContainerLeftSide" >
+					<img src="img/triansquare.png" alt="" class="editionImage">
+					<h3>Następne </br> Wfy</h3>
+					<h4>POZOSTAŁO:</h4>
+					<h5 id="demo"></h5>
+			  <div class="editionImgOverlayLeftSide" >
+				<img src="img/plakaty/rsz_plakat12.png" alt="" class="plakatImgLeft">
+				<a href="edycja12.html" target="_blank"><div class="editionImgTextLeft">PRZEJDŹ DO EDYCJI</div></a>
+			  </div>
+			</div>
+		</div>
+		
+	</section>
+	<section id="org">
+		<div class="outsideOrg">
+		<div class="textOrg">Współpraca</div>
+			<div class="insideOrg">
+			  <button class="btnLeftOrg"><i class="fa fa-angle-left"></i></button>
+			  <ul class="slider">
+				<li><a href="" target="_blank"><img src="img/Logo/LogoLO1.png"></a></li>
+				<li><a href="" target="_blank"><img src="img/Logo/LogoUWr.jpg"></a></li>
+				<li><a href="" target="_blank"><img src="img/Logo/uniwerekWroc.jpg"></a></li>
+				<li><a href="" target="_blank"><img src="img/Logo/WarsztatyFizyczne.png"></a></li>
+				<li><a href="" target="_blank"><img src="img/Logo/znaczek.png"></a></li>
+				
+			  </ul>
+			  <button class="btnRightOrg"><i class="fa fa-angle-right"></i></button>
+			</div>
+		</div>
+	</section>
+	<section id="learn" class="contact">
+		<div id="contact"></div>
+				<h3>Chcesz wiedzieć więcej?</h3>
+				<p>Zapytaj</p>
+		<div class="contact-form">
+			<form id="contact-form" method="post" action="sendEmail.php">
+				<input name="name" type="text" class="form-control" placeholder="Imię" required><br>
+				<input name="email" type="text" class="form-control" placeholder="Email" required><br>
+				<input name="subject" type="text" class="form-control" placeholder="Temat" required><br>
+					<textarea name="message" class="form-control" placeholder="Wiadomość" row="4" required></textarea><br>
+					<input type="submit" class="form-control submit" value="Wyślij">
+			</form>
+		</div>
+	</section>
+	<section id="footer" class="footer">
+		<div class="lockup">
+			<div class="logo-picture"><img src="img/faviconSC.png" height="60" width="60"></div>
+			<div class="content-wrap">
+				<soc>
+					<a target="_blank" href="https://www.facebook.com/szymon.czartoryski"><i  class="fab fa-facebook fa-2x whitecolor" ></i></a>
+					<a target="_blank" href="https://github.com/VaiaIthilnaur"><i class="fab fa-github fa-2x whitecolor"></i></a>
+					<a target="_blank" href="https://www.linkedin.com/in/sczartoryski/"><i class="fab fa-linkedin fa-2x whitecolor"></i></a>
+					<a target="_blank" href="https://www.instagram.com/heymynameisdeath/"><i class="fab fa-instagram fa-2x whitecolor"></i></a>
+				</soc>
+				<p class="copyright">© Copyright Vaia Ithilnaur 2019</p>
+			</div>
+		</div>
+	</section>
+      <script type="text/javascript">
+var running = false;
+jQuery(".btnRightOrg").hover(function(){
+  if(running == false) {
+    var elWidth = parseInt(jQuery(".slider").css( "width" ), 0);
+    var elPos = parseInt(jQuery(".slider").css( "left" ), 0);
+    var time = ( elWidth + elPos ) * 4;
+    jQuery(".slider").animate({left: "-100%"}, time, "swing");
+    running = true;
+  }
+});
+jQuery(".btnLeftOrg").hover(function(){
+  if(running == false) {
+    var elPos = parseInt(jQuery(".slider").css( "left" ), 0);
+    var time = Math.abs( elPos ) * 4;
+    jQuery(".slider").animate({left: "0%"}, time, "swing");
+    running = true;
+  }
+});
+jQuery("button").mouseleave(function(){
+  jQuery(".slider").stop(true, false);
+  running = false;
+});
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollBtns").style.display = "block";
+    } else {
+        document.getElementById("scrollBtns").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+//countDOWN
+
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 29, 2019 7:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+      </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+		
+	
+</body>
+</html>
