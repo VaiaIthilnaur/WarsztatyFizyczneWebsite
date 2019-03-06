@@ -1,2 +1,2 @@
 # WarsztatyFizyczneWebsite
-Site for physics workshops
+WebSite for physics workshops
